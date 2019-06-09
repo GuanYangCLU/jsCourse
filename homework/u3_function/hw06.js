@@ -16,9 +16,6 @@
     }
     Write a function to do so.
  */
-// var stdStr = require('string');
-
-var input = 'abc cde adb dfb def ee abcd cc';
 
 /**
  * @api {calc} / Request input information
@@ -65,4 +62,6 @@ const rs = input => {
   // console.log(arr);
 };
 
+// Update your input here:
+var input = 'abc cde adb dfb def ee abcd cc';
 console.log(rs(input));
