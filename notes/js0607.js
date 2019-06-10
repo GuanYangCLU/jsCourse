@@ -1,3 +1,10 @@
+//Destructure
+let a1 = [1, 2];
+let a2 = [3, 4];
+a1.push(...a2);
+// a1 = [...a2]; // [3,4]
+console.log(a1);
+
 // function rewrite itself
 function a() {
   console.log('A!');
