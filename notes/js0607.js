@@ -67,3 +67,20 @@ function b() {
   return;
 }
 b();
+
+// Arrow Functions
+// all anonymous
+let f = function(a) {
+  return a * a;
+};
+// Same as
+a => a * a;
+
+(a, b) => {
+  console.log(a);
+  console.log(b);
+  return a * b;
+};
+let arr = [1, 2, 3, 4];
+let doub = arr.map(x => x * 2);
+console.log(doub(arr));

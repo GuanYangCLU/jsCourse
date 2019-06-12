@@ -41,13 +41,13 @@ console.log(foo);
 
 var [a] = [];
 console.log(a);
-var [b = 10] = [undefined];
+var [b = 10] = [undefined]; // same as [](because of compiler confuse), but if it is null or false, it becomes null/false
 console.log(b);
 var [c = 10] = [];
 console.log(c);
 // myAns: undefined, undefined, undefined
 // trAns: undefined, 10, 10
-// explain: @@@@@@@@@@@@@@@@@@@@@@@@
+// explain: b,c assign at global? immutable and reference?
 
 function getCoords() {
   return {
@@ -83,7 +83,7 @@ console.log(random({ max: 24 }));
 // myAns:
 // var arr1 = [1, 2];
 // var arr2 = [3, 4];
-// var arr3 = [...arr1, ...arr2];
+// var arr3 = [...arr1, ...arr2]; // push will change arr1
 // console.log(arr3);
 
 // To select certain parameters over the others in a function

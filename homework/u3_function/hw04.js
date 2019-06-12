@@ -7,6 +7,7 @@
 // return Math.floor(x) === x
 // try {console.log(arr[x])} catch (e) { console.log(e)}
 // if ('.' in [...x.toString()]) { return true }
+// typeof x === Number?
 
 // Write a sum function which will work properly when invoked using either syntax below.
 console.log(sum(2, 3)); // Outputs 5
@@ -19,6 +20,15 @@ console.log(sum(2)(3)); // Outputs 5
 //     return x + y;
 //   };
 // };
+const sum = (x, y) => {
+  if (y !== undefined) {
+    return x + y;
+  } else {
+    return function(z) {
+      x + z;
+    };
+  }
+};
 
 // const sum = x => (x>2?5:sum); ???
 

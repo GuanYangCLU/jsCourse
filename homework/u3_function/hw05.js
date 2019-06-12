@@ -104,3 +104,5 @@ const card_shuffle_all = (color, nb) => {
 card_init(color, nb);
 card_shuffle_line(color, nb);
 card_shuffle_all(color, nb);
+
+// 洗牌算法用经典的   i从后往前走 swap 该元素与 第random * (剩余长度) 个元素的位置
