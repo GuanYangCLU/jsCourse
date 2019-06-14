@@ -52,6 +52,7 @@ console.log(hero.getSecretIdentity());
 // 'John Doe'
 // fix:
 // console.log(stoleSecretIdentity.bind(hero)());
+// in browser: window // in node: global
 
 // Assuming d is an “empty” object in scope, say:
 
@@ -77,4 +78,9 @@ a[c] = 456;
 console.log(a[b]);
 // myAns: 123
 // trAns: 456
-// when we set b as a key of obj a, the key b should be automatically transfered to string:'Object Object', so as c, the process is like: a = {'Object Object': 123}, then a = {'Object Object': 456}, the key of obj transfer to string is same.
+// when we set b as a key of obj a, the key b should be automatically transfered to string:'Object Object', so as c, the process is like: a = {'object Object': 123}, then a = {'Object Object': 456}, the key of obj transfer to string is same.
+
+// const a = Object.prototype.toString.call({});
+// console.log(a)  // [object Object]
+
+// Array.isArray([])  // === "[object Array]"

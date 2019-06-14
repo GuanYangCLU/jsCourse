@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>HomeWork - OOP</title>
+    <link rel="stylesheet" href="twoSum.css" type="text/css" />
+    <script type="text/javascript" src="hw05.js"></script>
+    <script>
+      function showInput() {
+        document.getElementById('showInput').innerHTML =
+          'Last Num You Input: ' + tt.add(document.getElementById('num').value);
+      }
+      function showFind() {
+        document.getElementById('showFind').innerHTML =
+          'Last Num You Input: ' +
+          tt.find(document.getElementById('target').value);
+      }
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="column">
+        <input
+          type="password"
+          id="num"
+          placeholder="please input the number you add"
+        />
+        <button onclick="showInput()">
+          Add
+        </button>
+        <input id="target" placeholder="Find your Target" />
+        <button onclick="showFind()">
+          Find
+        </button>
+      </div>
+
+      <div class="column output">
+        <div class="lst" id="showInput">
+          Your Input:
+        </div>
+        <div class="lst" id="showFind">
+          Your Find:
+        </div>
+      </div>
+      <div class="foot">
+        <button id="remove" onclick="alert(tt.remove())">
+          Remove All
+        </button>
+      </div>
+    </div>
+  </body>
+</html>

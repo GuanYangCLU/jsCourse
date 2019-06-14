@@ -1,0 +1,86 @@
+body {
+  align-items: center;
+}
+
+input {
+  margin: 10px;
+  width: 160px;
+  height: 30px;
+}
+
+button {
+  transition: all 1s;
+  margin: 10px;
+  width: 90px;
+  height: 30px;
+  border-radius: 7px;
+  border: 2px solid #008cba;
+}
+
+button:hover {
+  background-color: #008cba;
+  /* transform: translateX(90px) translateY(30px) scale(0.8) rotate(360deg); */
+}
+
+#remove {
+  width: 25%;
+  height: 40%;
+  align-content: center;
+  /* visibility: hidden; */
+}
+
+.container {
+  /* -webkit-column-count: 2; */
+  width: 90%;
+  height: 90%;
+  padding: 10px;
+  align-self: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  float: left;
+  margin: 2%;
+}
+
+.column {
+  text-align: center;
+  width: 43%;
+  height: 90%;
+  padding: 10px;
+  /* align-self: middle; */
+  background-color: coral;
+  float: left;
+  margin: 2%;
+}
+
+.output {
+  background-color: gold;
+}
+
+.lst {
+  text-align: left;
+  width: 85%;
+  height: 90%;
+  padding: 10px;
+  /* align-self: middle; */
+  background-color: aquamarine;
+  float: left;
+  margin: 2%;
+}
+
+.foot {
+  text-align: center;
+  width: 93%;
+  height: 40%;
+  padding: 10px;
+  /* align-self: middle; */
+  background-color: #4caf50;
+  /* float: left; */
+  clear: both;
+  margin: 2%;
+}
+
+@media screen and (max-width: 760px) {
+  .column {
+    background-color: red;
+    width: 93%;
+  }
+}
