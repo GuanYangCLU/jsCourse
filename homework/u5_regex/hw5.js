@@ -94,6 +94,7 @@ const findPrefix = str => {
 };
 console.log(findPrefix(str));
 console.log(findPrefix(str2));
+// sort 后比较第一个和最后一个，差别最大，如果同则是
 
 // Q4
 var n = 15;

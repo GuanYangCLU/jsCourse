@@ -2,7 +2,7 @@
 
 // 1. Write a JavaScript function to get the sum of an array without using any loop statement.
 var arr = [1, 2, 3, 5, 8, 9, 7];
-const sum = arr.reduce((a, i) => (a += i), 0);
+const sum = arr.reduce((a, i) => (a += i), 0); // (accumlator, currentValue)
 console.log(sum);
 // function mode:
 // function sum(arr) {
