@@ -13,6 +13,7 @@ var student = {
 
 const getProp = obj => Object.getOwnPropertyNames(obj);
 console.log(getProp(student));
+// Object.keys()
 
 // 2. Write a JavaScript program to get the length (# of properties) of any given JavaScript object.
 // Sample object :
@@ -36,6 +37,8 @@ const getFuncProp = obj =>
   });
 
 console.log(getFuncProp(student));
+// getOwnPropertyNames
+// typeof === function
 
 // 4. Write a JavaScript function to parse any given URL into meaningful pieces.
 let inputUrl = 'https://www.google.com/news/today/101316';
@@ -47,6 +50,7 @@ const parseURL = url => {
   return arr;
 };
 console.log(parseURL(inputUrl));
+// @@ new URL('') @@
 
 // 5. Write a JavaScript function to retrieve all the names of any given object's own and inherited properties.
 
