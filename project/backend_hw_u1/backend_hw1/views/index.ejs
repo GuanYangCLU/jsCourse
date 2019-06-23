@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Matrix</title>
+    <script>
+      function change() {
+        // document.getElementById(dim).action = '' + ;
+        // var url = `http://localhost:5000/${document.getValueByName(dim)}`;
+        // var url = `http://localhost:5000/${
+        //   document.getElementById('dim').value
+        // }`;
+        // alert(document.getElementById('dim').value);
+        // alert('done1');
+
+        var url = '/';
+        var request = new XMLHttpRequest(); // step1: create XHR
+        // alert('done2');
+
+        request.open('POST', url, true); // step2: req info
+        // alert('done3' + url);
+        request.setRequestHeader(
+          // step3: header set. important! see postman settings
+          'Content-Type',
+          'application/x-www-form-urlencoded'
+        );
+
+        request.send(
+          // step4:send
+          // JSON.stringify({ v: document.getElementById('dim').value })
+          'v=' + document.getElementById('dim').value
+        );
+
+        request.onreadystatechange = function() {
+          // step5: get response
+          // xhr.responseText is an html string response, need to process it
+          // var json = JSON.parse(xhr.responseText);
+          document.getElementById('1').innerHTML = request.responseText
+            .split('],')
+            .join('],<br>');
+        };
+        // alert('suc!');
+      }
+    </script>
+  </head>
+  <body>
+    <div class="input">
+      <!-- <form id="dim" action="/4" method="GET"> -->
+      <div>
+        <input id="dim" placeholder="input dimension num" type="text" />
+      </div>
+      <div>
+        <input type="button" onclick="change()" value="submit" />
+      </div>
+      <!-- </form> -->
+    </div>
+    <div class="output">
+      <label id="1"></label>
+    </div>
+  </body>
+</html>
