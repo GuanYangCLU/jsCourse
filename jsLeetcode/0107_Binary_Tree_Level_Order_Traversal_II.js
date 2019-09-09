@@ -31,18 +31,16 @@ var levelOrderBottom = function(root) {
     let queue = [root];
     let rs = [[root.val]];
     while (queue.length > 0) {
-        let temp = [];
+        let temp = []; // to store each level's all node
+        // when finishing traversing this level, throw to rs and start next level
         for (let i=0;i<queue.length;i++) {
             queue[i].left && temp.push(queue[i].left);
             queue[i].right && temp.push(queue[i].right);
         }
-        if (temp.length > 0) {
+        if (temp.length > 0) { // this level is not empty
             rs.push(temp.map(item => item.val));
             queue = [...temp];
-        } else break;        
-        // console.log(queue);
-        // console.log(rs);
-        // console.log(temp);
+        } else break; // this level is already empty, traverse complete!
     }
     return rs.reverse();
 };
