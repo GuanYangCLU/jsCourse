@@ -11,7 +11,7 @@ This `Repo` includes *Notes* and *Homework* of Javascript course. <br>
 | Lecture 3   | Function         | 06/07/19 |
 
 <hr />
-**The file directory**: <br>
+** The file directory **: <br>
 
 
 ```
