@@ -1,8 +1,8 @@
-#Javascript Course
+# Javascript Course
 This `Repo` includes *Notes* and *Homework* of Javascript course. <br>
 
 ---
-###Class Outline:
+### Class Outline:
 
 | Lecture     | Topic            | Date     |
 | ----------- |:----------------:| --------:|
