@@ -2,6 +2,11 @@
  * @param {number} n
  * @return {string[]}
  */
+
+// explain: worst case: 2^2n: a tree with depth 2n
+// prunning constraint: l > r, l,r <= n
+// merge final
+
 var generateParenthesis = function(n) {
     if (n < 1) return [];
     return helper(0, n, '', 0, 0);
