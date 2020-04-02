@@ -5,3 +5,4 @@ Good: 1027
 Easy: 1025
 
 0673: Past State Update Current State
+0032: merge paired tails with cutten head before tails
