@@ -1,11 +1,30 @@
-// var isPalindrome = function(s) {
-//   let str = s.replace(/[^0-9a-zA-Z]/g, '').toLowerCase();
+// java
+class Solution {
+    public int[] twoSum(int[] nums, int target) {
+        Map<Integer, Integer> map = new HashMap();
+        for (int i=0;i<nums.length;i++) {
+            if (!map.containsKey(nums[i])) {
+                map.put(target - nums[i], i);
+            } else {
+                int rs[] = new int[]{map.get(nums[i]), i};
+                return(rs);
+            }
+        }
+        return(new int[]{});
+    }
+}
 
-// let a = [1, 2, 3, 4, 5];
-// let b = a.reduce((a, b) => a + b);
-// console.log(b);
-
-//   return str;
-// };
-
-// console.log(isPalindrome('A man, a plan, a canal: Panama'));
+// python
+class Solution:
+    def twoSum(self, nums, target):
+        """
+        :type nums: List[int]
+        :type target: int
+        :rtype: List[int]
+        """
+        
+        dict = {i: (target - nums[i]) for i in range(len(nums))}
+        for i in range(len(nums)):
+            if (dict[i] in nums):
+                if (nums.index(dict[i]) != i):
+                    return sorted([i,nums.index(dict[i])])
