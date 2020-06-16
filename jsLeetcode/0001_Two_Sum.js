@@ -1,4 +1,23 @@
-// java
+// JavaScript
+/**
+ * @param {number[]} nums
+ * @param {number} target
+ * @return {number[]}
+ */
+var twoSum = function(nums, target) {
+    try {
+        nums.reduce((accum, item, idx) => {
+            if (item in accum) throw [accum[item], idx];
+            return { ...accum, [target - item]: idx };
+        }, {});
+    } catch(err) {
+        return err;
+    }
+    
+    return [];
+};
+
+// Java
 class Solution {
     public int[] twoSum(int[] nums, int target) {
         Map<Integer, Integer> map = new HashMap();
@@ -14,7 +33,22 @@ class Solution {
     }
 }
 
-// python
+// Python Good
+class Solution:
+    def twoSum(self, nums, target):
+        """
+        :type nums: List[int]
+        :type target: int
+        :rtype: List[int]
+        """
+        
+        dic = {}
+        for i, n in enumerate(nums):
+            if (n in dic):
+                return [dic[n], i]
+            dic[target - n] = i
+
+// Python Naive
 class Solution:
     def twoSum(self, nums, target):
         """
